@@ -11,7 +11,7 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String CName, CSurname, CTelephone;
-
+    
     public Long getId() {
         return id;
     }

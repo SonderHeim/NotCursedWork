@@ -1,9 +1,7 @@
 package com.example.NotCursedWork.Controllers;
 
 import com.example.NotCursedWork.models.Client;
-import com.example.NotCursedWork.models.Worker;
 import com.example.NotCursedWork.repository.ClientRepository;
-import com.example.NotCursedWork.repository.WorkerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
