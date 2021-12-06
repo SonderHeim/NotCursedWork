@@ -38,8 +38,8 @@ public class RegisterController {
     }
 
     @PostMapping("/RegisterDB/add")
-    public String RegisterAController(@RequestParam Integer Hardware, @RequestParam boolean PDevices, Model model){
-        Register register = new Register(Hardware, PDevices);
+    public String RegisterAController(@RequestParam Integer Hardware, @RequestParam boolean PDevices, @RequestParam Long Worker, Model model){
+        Register register = new Register(Hardware, PDevices, Worker);
         registerRepository.save(register);
         return "redirect:/RegisterDB";
     }

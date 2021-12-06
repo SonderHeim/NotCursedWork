@@ -32,6 +32,7 @@
     <div class="container mt-5" th:each="el : ${register}">
       <input type="text" th:value="${el.getHardware()}" name="Hardware" placeholder="Введите имя работника" class="form-control">
       <input type="text" th:value="${el.isPDevices()}" name="PDevices" placeholder="Введите фамилию работника" class="form-control">
+      <input type="text" th:value="${el.getWorker()}" name="Worker" placeholder="Введите Id работника" class="form-control">
       <div style="padding-top: 5px"></div>
       <div style="padding-left: 46%; margin-top: 10px"> <button type="submit"> Обновить </button> </div>
     </div>

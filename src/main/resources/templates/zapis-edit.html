@@ -35,6 +35,10 @@
       <textarea name="List_of_products" placeholder="Изменить список продуктов" class="form-control" th:text="${el.getList_of_products()}"/>
       <div style="padding-top: 5px"></div>
       <input type="Text" th:value="${el.isStatus()}" name="Status" placeholder="Изменить стоимость" class="form-control">
+      <div style="padding-top: 5px"></div>
+      <input type="Text" th:value="${el.getClient_id()}" name="Status" placeholder="Изменить Id клиента" class="form-control">
+      <div style="padding-top: 5px"></div>
+      <input type="Text" th:value="${el.getRegister_id()}" name="Status" placeholder="Изменить Id регистра" class="form-control">
       <div style="padding-left: 46%; margin-top: 10px"> <button type="submit"> Обновить </button> </div>
     </div>
     <div style="padding-top: 5px"></div>

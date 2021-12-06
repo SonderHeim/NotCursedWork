@@ -71,8 +71,8 @@ public class ZapisController {
     }
 
     @PostMapping("/zapis/add")
-    public String ZapishuController(@RequestParam String List_of_products, Model model){
-        Order1 order1 = new Order1(List_of_products);
+    public String ZapishuController(@RequestParam String List_of_products, @RequestParam Long client_id, @RequestParam Long register_id, Model model){
+        Order1 order1 = new Order1(List_of_products, client_id, register_id);
         orderRepository.save(order1);
         return "redirect:/zapis";
     }

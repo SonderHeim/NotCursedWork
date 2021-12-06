@@ -1,9 +1,6 @@
 package com.example.NotCursedWork.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Client {
@@ -11,7 +8,7 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String CName, CSurname, CTelephone;
-    
+
     public Long getId() {
         return id;
     }

@@ -12,6 +12,21 @@ public class Register {
     private Long id;
     private Integer Hardware;
     private boolean PDevices;
+    private Long Worker;
+
+    public Register(Integer hardware, boolean PDevices, Long worker) {
+        Hardware = hardware;
+        this.PDevices = PDevices;
+        Worker = worker;
+    }
+
+    public Long getWorker() {
+        return Worker;
+    }
+
+    public void setWorker(Long worker) {
+        Worker = worker;
+    }
 
     public Long getId() {
         return id;
@@ -38,10 +53,5 @@ public class Register {
     }
 
     public Register() {
-    }
-
-    public Register(Integer hardware, boolean PDevices) {
-        Hardware = hardware;
-        this.PDevices = PDevices;
     }
 }
