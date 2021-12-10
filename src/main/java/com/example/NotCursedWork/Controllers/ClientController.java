@@ -36,8 +36,8 @@ public class ClientController {
     }
 
     @PostMapping("/ClientDB/add")
-    public String ClientAController(@RequestParam String CName, @RequestParam String CSurname, @RequestParam String CTelephone, Model model){
-        Client client = new Client(CName, CSurname, CTelephone);
+    public String ClientAController(@RequestParam String CName, @RequestParam String CSurname, @RequestParam String CTelephone, @RequestParam String Alpha, @RequestParam String Beta, Model model){
+        Client client = new Client(CName, CSurname, CTelephone, Alpha, Beta);
         clientRepository.save(client);
         return "redirect:/ClientDB";
     }
@@ -51,15 +51,5 @@ public class ClientController {
         client.ifPresent(res::add);
         model.addAttribute("client", res);
         return "ClientDB-edit";
-    }
-
-    @PostMapping("/ClientDB/{id}/edit")
-    public String ClientUpdate(@PathVariable(value = "id") long id, @RequestParam String CName, @RequestParam String CSurname, @RequestParam String CTelephone, Model model){
-        Client client = clientRepository.findById(id).orElseThrow();
-        client.setCName(CName);
-        client.setCSurname(CSurname);
-        client.setCTelephone(CTelephone);
-        clientRepository.save(client);
-        return "redirect:/ClientDB";
     }
 }

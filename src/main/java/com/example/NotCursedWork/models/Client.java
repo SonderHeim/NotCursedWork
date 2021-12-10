@@ -7,7 +7,7 @@ public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String CName, CSurname, CTelephone;
+    private String CName, CSurname, CTelephone, Alpha, Beta;
 
     public Long getId() {
         return id;
@@ -44,9 +44,27 @@ public class Client {
     public Client() {
     }
 
-    public Client(String CName, String CSurname, String CTelephone) {
+    public Client(String CName, String CSurname, String CTelephone, String alpha, String beta) {
         this.CName = CName;
         this.CSurname = CSurname;
         this.CTelephone = CTelephone;
+        Alpha = alpha;
+        Beta = beta;
+    }
+
+    public String getAlpha() {
+        return Alpha;
+    }
+
+    public void setAlpha(String alpha) {
+        Alpha = alpha;
+    }
+
+    public String getBeta() {
+        return Beta;
+    }
+
+    public void setBeta(String beta) {
+        Beta = beta;
     }
 }

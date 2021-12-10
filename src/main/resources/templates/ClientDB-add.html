@@ -11,7 +11,7 @@
 <body style="background-color: #2d4d6f">
 <nav class="navbar navbar-expand-lg" style="background-color: #243f5c">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#" style="color: white">Цветочный магазин</a>
+    <a class="navbar-brand" href="#" style="color: white">Магазин</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,15 +26,17 @@
 </nav>
 <div class="start"></div>
 
-<h1 style="color: white"> Добавление клиента </h1>
+<h1 style="color: white"> Добавление автомобиля </h1>
 <div>
   <form action="/ClientDB/add" method="post">
     <div class="container mt-5">
-      <input type="text" name="CName" placeholder="Введите имя клиента" class="form-control">
-      <input type="text" name="CSurname" placeholder="Введите фамилию клиента" class="form-control">
-      <input type="text" name="CTelephone" placeholder="Введите телефон клиента" class="form-control">
+      <input type="text" name="CName" placeholder="Введите информацию об автомобиле " class="form-control">
+      <input type="text" name="CSurname" placeholder="Введите уникальный идентификатор автомобиля" class="form-control">
+      <input type="text" name="CTelephone" placeholder="Введите информацию о бренде автомобиля" class="form-control">
+      <input type="text" name="Alpha" placeholder="Введите текущую цену автомобиля" class="form-control">
+      <input type="text" name="Beta" placeholder="Введите возраст автомобиля" class="form-control">
       <div style="padding-top: 5px"></div>
-      <div style="padding-left: 46%; margin-top: 10px"> <button type="submit"> Добавить клиента </button> </div>
+      <div style="padding-left: 46%; margin-top: 10px"> <button type="submit"> Добавить информацию </button> </div>
     </div>
     <div style="padding-top: 5px"></div>
   </form>
