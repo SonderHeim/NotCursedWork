@@ -28,30 +28,20 @@
     </div>
   </div>
 </nav>
-<div>
-  <form action="/zapis/filter" method="post">
-    <div class="container mt-5">
-      <input type="text" name="id" placeholder="Id заказа" class="form-control">
-      <div style="padding-top: 5px"></div>
-      <div style="padding-left: 46%; margin-top: 10px"> <button type="submit"> Отфильтровать </button> </div>
-    </div>
-    <div style="padding-top: 5px"></div>
-  </form>
-</div>
 <div style="margin-top: 6%"></div>
-<div class="box4" style="margin-left: auto; margin-right: auto" th:each="order :${order1s}">
+<div class="box4" style="margin-left: auto; margin-right: auto" th:each="order :${Order1s}">
   <table>
-  <tr>
-    <th style="color: white">Id</th>
-    <th style="color: white; margin-left: 10px">Стоимость заказа</th>
-    <th style="color: white; margin-left: 10px">Список заказа</th>
-  </tr>
-  <tr style="color: white">
-    <td th:text="${order.getId()}"></td>
-    <td th:text="${order.getPrice()}"></td>
-    <td th:text="${order.getList_of_products()}"></td>
-  </tr>
-</table>
+    <tr>
+      <th style="color: white">Id</th>
+      <th style="color: white; margin-left: 10px">Стоимость заказа</th>
+      <th style="color: white; margin-left: 10px">Список заказа</th>
+    </tr>
+    <tr style="color: white">
+      <td th:text="${order.getId()}"></td>
+      <td th:text="${order.getPrice()}"></td>
+      <td th:text="${order.getList_of_products()}"></td>
+    </tr>
+  </table>
   <a th:href="'zapis/' + ${order.getId()}" class="btn btn-warning"> Детальнее </a>
 </div>
 

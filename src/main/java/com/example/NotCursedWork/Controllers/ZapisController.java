@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -75,5 +76,17 @@ public class ZapisController {
         Order1 order1 = new Order1(List_of_products, client_id, register_id);
         orderRepository.save(order1);
         return "redirect:/zapis";
+    }
+
+    @GetMapping("/zapis/filter")
+    public String ZapisFlt(Model model){
+        return "zapis-filter";
+    }
+
+    @PostMapping("/zapis/filter")
+    public String ZapisFilter(@RequestParam Long id, Model model){
+        List<Order1> order1s = orderRepository.findAllbyidId(id);
+        model.addAttribute("Order1s", order1s);
+        return "zapis-filter";
     }
 }
