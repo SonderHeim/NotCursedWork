@@ -13,4 +13,7 @@ public interface OrderRepository extends CrudRepository<Order1, Long> {
 
     @Query("from Order1 order by Price ASC")
     List<Order1> findByPrice();
+
+    @Query("from  Order1 where List_of_products=:List_of_products")
+    List<Order1> findAllbyProducts(@Param("List_of_products") String List_of_products);
 }

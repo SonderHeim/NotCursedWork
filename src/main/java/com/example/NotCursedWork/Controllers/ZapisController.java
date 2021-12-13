@@ -93,10 +93,23 @@ public class ZapisController {
     public String ZapisFilt(Model model){
         return "zapis-filterv2";
     }
+
     @PostMapping("/zapis/filterv2")
     public String ZapisFilter(Model model){
         List<Order1> order1s = orderRepository.findByPrice();
         model.addAttribute("Order1s", order1s);
         return "zapis-filterv2";
+    }
+
+    @GetMapping("/zapis/filterv3")
+    public String ZapisFilte(Model model){
+        return "zapis-filterv3";
+    }
+
+    @PostMapping("/zapis/filterv3")
+    public String ZapisFilter1(@RequestParam String List_of_products, Model model){
+        List<Order1> order1s = orderRepository.findAllbyProducts(List_of_products);
+        model.addAttribute("Order1s", order1s);
+        return "zapis-filterv3";
     }
 }
