@@ -7,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title th:text="${title}"></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link th:href="@{/static.css/home.css}" rel="stylesheet" />
 </head>
 <body style="background-color: #2d4d6f">
 <nav class="navbar navbar-expand-lg" style="background-color: #243f5c">
@@ -29,19 +28,19 @@
     </div>
 </nav>
 <div style="margin-top: 6%"></div>
-<div class="box4" style="margin-left: auto; margin-right: auto" th:each="order :${registers}">
+<div class="box4" style="margin-left: auto; margin-right: auto; margin-top: 20px" th:each="order :${registers}">
     <table>
         <tr>
             <th style="color: white">Id</th>
-            <th style="color: white">Id работника</th>
-            <th style="color: white; margin-left: 10px">Объём жесткого диска</th>
-            <th style="color: white; margin-left: 10px">Целостность переферийных устройств</th>
+            <th style="color: white; padding-left: 20px">Id работника</th>
+            <th style="color: white; padding-left: 20px">Объём жесткого диска</th>
+            <th style="color: white; padding-left: 20px">Целостность переферийных устройств</th>
         </tr>
         <tr style="color: white">
             <td th:text="${order.getId()}"></td>
-            <td th:text="${order.getWorker()}"></td>
-            <td th:text="${order.getHardware()}"></td>
-            <td th:text="${order.isPDevices()}"></td>
+            <td style="padding-left: 20px" th:text="${order.getWorker()}"></td>
+            <td style="padding-left: 20px" th:text="${order.getHardware()}"></td>
+            <td style="padding-left: 20px" th:text="${order.isPDevices()}"></td>
         </tr>
     </table>
     <a th:href="'/RegisterDB/' + ${order.getId() + '/edit'}" class="btn btn-warning"> Редактировать </a>

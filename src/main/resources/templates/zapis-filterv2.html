@@ -29,17 +29,17 @@
   </div>
 </nav>
 <div style="margin-top: 6%"></div>
-<div class="box4" style="margin-left: auto; margin-right: auto" th:each="order :${Order1s}">
+<div class="box4" style="margin-left: auto; margin-right: auto; margin-top: 20px" th:each="order :${Order1s}">
   <table>
     <tr>
       <th style="color: white">Id</th>
-      <th style="color: white; margin-left: 10px">Стоимость заказа</th>
-      <th style="color: white; margin-left: 10px">Список заказа</th>
+      <th style="color: white; padding-left: 20px">Стоимость заказа</th>
+      <th style="color: white; padding-left: 20px">Список заказа</th>
     </tr>
     <tr style="color: white">
       <td th:text="${order.getId()}"></td>
-      <td th:text="${order.getPrice()}"></td>
-      <td th:text="${order.getList_of_products()}"></td>
+      <td style="padding-left: 20px" th:text="${order.getPrice()}"></td>
+      <td style="padding-left: 20px" th:text="${order.getList_of_products()}"></td>
     </tr>
   </table>
   <a th:href="'zapis/' + ${order.getId()}" class="btn btn-warning"> Детальнее </a>
